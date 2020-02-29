@@ -1,3 +1,22 @@
+@media (max-width: 1660px) {
+  .footer__contacts {
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 15px;
+  }
+  .footer__contacts .addres {
+    margin-bottom: 10px;
+  }
+  .footer__contacts .specialist__wrap {
+    margin: 0;
+  }
+  .footer__contacts .specialist__wrap .specialist span {
+    font-size: 18px;
+    color: #ffffff;
+  }
+}
 @media (max-width: 1500px) {
   .pagenav__links .link li a {
     font-size: 10px;
@@ -126,5 +145,15 @@
 @media (max-width: 480px) {
   .header .telephones .phone {
     margin: 10px;
+  }
+}
+@media (max-width: 410px) {
+  .header .telephones .phone {
+    margin: 5px;
+  }
+  .header .telephones .phone img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
   }
 }
