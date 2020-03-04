@@ -127,6 +127,70 @@
     width: 480px;
     height: 300px;
   }
+  .pump {
+    padding: 15px 15px 0 15px;
+  }
+  .pump__img {
+    padding: 0;
+  }
+  .pump__img .pump__img-flex {
+    display: flex;
+    justify-content: space-around;
+  }
+  .pump__img .pump__img-flex .img-container {
+    width: 480px;
+    height: 300px;
+  }
+  .pump__house .pump__img-flex {
+    display: flex;
+    justify-content: space-around;
+  }
+  .pump__house .pump__img-flex .img-container {
+    margin: 5px 0;
+    text-align: center;
+    width: 480px;
+    height: 330px;
+  }
+  .groundwater {
+    padding: 0 15px;
+  }
+  .groundwater__list {
+    margin-bottom: 15px;
+  }
+  .groundwater__mounting h2 {
+    margin: 0;
+  }
+  .groundwater__table {
+    margin: 0;
+  }
+  .groundwater__mounting .groundwater__mounting-manual {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .groundwater__mounting .groundwater__mounting-manual .manual {
+    width: 370px;
+    height: 100%;
+  }
+  .groundwater__mounting .groundwater__mounting-manual .manual .manual-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .groundwater__mounting .groundwater__mounting-manual .manual .manual-img img {
+    width: 100%;
+    height: 300px;
+  }
+  .groundwater__mounting .groundwater__mounting-manual .manual .manual-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .groundwater__mounting .groundwater__mounting-manual .manual .manual-text p {
+    margin: 0;
+    text-align: center;
+  }
 }
 @media (max-width: 1000px) {
   .payback .payback__img .payback__img-flex .img-container {
@@ -152,6 +216,16 @@
     justify-content: space-around;
   }
   .img__wrap .img__wrap-flex .img-container {
+    width: 390px;
+    height: 250px;
+  }
+  .pump__img .pump__img-flex .img-container {
+    width: 390px;
+    height: 250px;
+  }
+  .pump__house .pump__img-flex .img-container {
+    margin: 5px 0;
+    text-align: center;
     width: 390px;
     height: 250px;
   }
@@ -191,7 +265,20 @@
     max-height: 100%;
   }
 }
+@media (max-width: 840px) {
+  .pump__img .pump__img-flex .img-container {
+    width: 350px;
+    height: 250px;
+  }
+  .pump__house .pump__img-flex .img-container {
+    width: 350px;
+    height: 250px;
+  }
+}
 @media (max-width: 810px) {
+  .table {
+    font-size: 14px;
+  }
   .pagenav__links .link {
     max-width: 600px;
     display: block;
@@ -238,6 +325,15 @@
   .img__wrap .img__wrap-flex .img-container {
     margin-bottom: 5px;
   }
+  .groundwater__mounting .groundwater__mounting-manual {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .groundwater__mounting .groundwater__mounting-manual .manual {
+    width: 350px;
+    height: 100%;
+  }
 }
 @media (max-width: 790px) {
   .header .nav {
@@ -259,7 +355,33 @@
     height: 250px;
   }
 }
+@media (max-width: 750px) {
+  .pump__img h2 {
+    font-size: 20px;
+  }
+  .pump__img .pump__img-flex .img-container {
+    width: 410px;
+    height: 290px;
+  }
+  .pump__house {
+    padding: 15px 0 0 0;
+  }
+  .pump__house .pump__house-subtitle p {
+    font-size: 18px;
+  }
+  .pump__house .pump__img-flex .img-container {
+    width: 410px;
+    height: 280px;
+  }
+  .pump__house .pump__img-flex .img-container img {
+    width: 100%;
+    height: 260px;
+  }
+}
 @media (max-width: 719px) {
+  .table {
+    font-size: 12px;
+  }
   .header .nav {
     width: 100%;
     height: 100%;
@@ -322,6 +444,18 @@
   }
 }
 @media (max-width: 660px) {
+  .payback__options-table,
+  .groundwater__table,
+  .tableblock {
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
+  }
+  .payback__options-table .table,
+  .groundwater__table .table,
+  .tableblock .table {
+    width: auto;
+  }
   .header .telephones {
     padding: 0 15px;
   }
@@ -332,6 +466,9 @@
     color: #f3e10f;
     font-size: 14px;
     cursor: pointer;
+  }
+  .groundwater__mounting h2 {
+    font-size: 20px;
   }
 }
 @media (max-width: 480px) {
