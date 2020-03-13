@@ -5,67 +5,63 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/build/css/style.css">
-	<!-- !шрифты<link href="" rel="stylesheet"> -->
 	<link rel="shortcut icon" href="/src/img/favicon/icon.png" type="image/x-icon">
-	<title>fourth page</title>
+	<title>Solar systems Invest-о нас</title>
 </head>
 
 <body>
 	<header class="header">
 		<div class="telephones">
-			<div class="phone">
-				<img src="/src/img/favicon/viber.png" alt="viber">
-				<img src="/src/img/favicon/whatsapp.png" alt="whatsapp">
-				<span>066-334-24-35</span>
+			<div class="logo">
+				<img class="logo-img" src="/src/img/favicon/icon.png" alt="logo">
+				<p class="logo-name">Solar systems Invest</p>
 			</div>
-			<div class="phone">
-				<span>098-329-08-79</span>
-			</div>
-			<div class="phone">
-				<span>063-706-01-33</span>
+			<div class="contact">
+				<div class="phone">
+					<img src="/src/img/favicon/viber.png" alt="viber">
+					<img src="/src/img/favicon/whatsapp.png" alt="whatsapp">
+					<span>066-334-24-35</span>
+				</div>
+				<div class="phone">
+					<span>098-329-08-79</span>
+				</div>
+				<div class="phone">
+					<span>063-706-01-33</span>
+				</div>
 			</div>
 		</div>
 		<nav class="nav">
 			<div class="nav__navigation">
 				<ul class="menu">
 					<li><a href="/index.html" target="_blank">главная</a></li>
-					<li><a href="/index.html#title6" target="_blank">прайс</a></li>
+					<li><a href="/index.html#title6" target="_blank">прайс лист</a></li>
 					<li><a href="#title7" class="js-scroll">контакты</a></li>
 				</ul>
 			</div>
 		</nav>
 	</header>
-
-
-
-	<!-- <section class="pagenav">
-		<div class="pagenav__links">
-			<ul class="link">
-				<li><a href="#title1" class="js-scroll">не только зеленый тариф</a></li>
-				<li><a href="#title2" class="js-scroll">электростанции под «зеленый тариф»</a></li>
-				<li><a href="#title3" class="js-scroll">гибридные солнечные электростанции</a></li>
-				<li><a href="#title4" class="js-scroll">автономные солнечные электростанции</a></li>
-				<li><a href="#title5" class="js-scroll">диспетчеризацию электрических нагрузок</a></li>
-				<li><a href="#title6" class="js-scroll">прайс лист</a></li>
-			</ul>
-		</div>
-	</section> -->
-
 	<section class="aboutus container">
 		<div class="aboutus__title">
 			<!--!заполнить ссылки  -->
-			<p><a href="">Наши Заказчики</a> предприятия: <a href="">АТБ, Интерпайп, ДСЗ,</a>агрофирмы: <a
-					href="">Агро-Овен, ВПК Агро, Экофилд</a> физлица с крупными частными домовладениями.</p>
+			<h2>о нас</h2>
+			<p><a href="#">Наши заказчики</a> предприятия: <a href="#">АТБ, Интерпайп, ДСЗ. </a>Агрофирмы: <a
+					href="#">Агро-Овен, ВПК Агро, Экофилд</a> физлица с крупными частными домовладениями.</p>
+		</div>
+		<div class="aboutus__forms">
+			<h3>Мы вам перезвоним!</h3>
+			<form name="User form" class="form" autocomplete="on">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="Solar systems Invest">
+				<input type="hidden" name="admin_email" value="romanow@i.ua">
+				<input type="hidden" name="form_subject" value="User form">
+				<!-- END Hidden Required Fields -->
+				<input class="form-data" type="text" name="Name" placeholder="Name" required>
+				<input class="form-data" type="tel" name="Telephone" placeholder="+380..." required>
+				<textarea class="form-textarea" name="Comments" placeholder="Your comments"></textarea>
+				<button class="form-but" type="submit">send</button>
+			</form>
 		</div>
 	</section>
-
-
-
-
-
-
-
-
 	<footer class="footer" id="title7">
 		<div class="footer__contacts">
 			<div class="addres">
@@ -83,6 +79,7 @@
 			</div>
 			<div class="accounting">
 				<p>Бухгалтерия: (098)329-08-79</p>
+				<p>Ema@il: 3342435@ukr.net</p>
 			</div>
 		</div>
 		<div class="footer__maps">
@@ -96,7 +93,8 @@
 			<span>Все права защищены</span>
 		</div>
 	</footer>
-
+	
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script src="/build/js/script.js"></script>
 </body>
 

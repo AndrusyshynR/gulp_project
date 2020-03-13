@@ -1,24 +1,20 @@
 @font-face {
-  font-family: 'PT Serif';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('PT Serif'), local('PTSerif-Regular'), url(https://fonts.gstatic.com/s/ptserif/v11/EJRVQgYoZZY2vCFuvAFSzro.ttf) format('truetype');
+  font-family: 'PTSans-Reg';
+  src: url(/src/fonts/PTSans-Regular.ttf);
 }
 @font-face {
-  font-family: 'PT Serif';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('PT Serif Bold'), local('PTSerif-Bold'), url(https://fonts.gstatic.com/s/ptserif/v11/EJRSQgYoZZY2vCFuvAnt66qWVy4.ttf) format('truetype');
+  font-family: 'PT-Bold';
+  src: url(/src/fonts/PTSans-Bold.ttf);
 }
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 body {
-  height: 100%;
-  margin: 0 auto;
-  font-family: 'PT Serif', 'Times New Roman', Times, serif;
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: 'PTSans-Reg', 'Times New Roman', Times, serif;
   color: black;
   user-select: none;
   background: #f1d535;
@@ -62,26 +58,54 @@ ul {
   width: 100%;
   background: #000;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
 }
-.header .telephones .phone {
+.header .telephones .logo {
   display: flex;
   align-items: center;
-  margin: 20px 40px 0 0;
 }
-.header .telephones .phone img {
+.header .telephones .logo .logo-img {
+  width: 150px;
+  height: 60px;
+}
+.header .telephones .logo .logo-name {
+  font-size: 30px;
+  color: #f3e10f;
+  margin-left: 10px;
+}
+.header .telephones .logo .logo-name:hover {
+  color: #FFFF00;
+  text-shadow: 20px 25px 3px #fff;
+  transition: 2s;
+  cursor: pointer;
+}
+.header .telephones .contact {
+  display: flex;
+  align-items: center;
+}
+.header .telephones .contact .phone {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.header .telephones .contact .phone img {
   width: 25px;
   height: 25px;
   margin-right: 5px;
 }
-.header .telephones .phone span {
+.header .telephones .contact .phone span {
   color: #fff;
   font-size: 16px;
 }
-.header .telephones .phone span:hover {
+.header .telephones .contact .phone span:hover {
   color: #f3e10f;
-  font-size: 18px;
   cursor: pointer;
+}
+.header .telephones .contact .phone:last-child {
+  margin-right: 0px;
 }
 .header .nav {
   width: 100%;
@@ -108,7 +132,7 @@ ul {
 }
 .header .nav .nav__navigation .menu li a:hover {
   color: #fff917;
-  border: 1px #fff917 solid;
+  border: 2px #fff917 solid;
 }
 .pagenav {
   display: flex;
@@ -140,10 +164,18 @@ ul {
   border-collapse: collapse;
   border: 3px solid #000;
   text-align: center;
+  font-size: 16px;
 }
 .table td,
 .table th {
   border: 2px solid #000;
+}
+button,
+input,
+textarea {
+  outline: none;
+  vertical-align: baseline;
+  line-height: normal;
 }
 .description {
   padding: 30px 0 15px 0;
@@ -595,10 +627,20 @@ ul {
 }
 .aboutus {
   width: 100%;
-  height: 500px;
+}
+.aboutus__title {
+  margin: 15px 0;
+}
+.aboutus__title h2 {
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #186625;
+  text-align: center;
+  margin-bottom: 5px;
 }
 .aboutus__title P {
   font-size: 18px;
+  text-align: justify;
 }
 .aboutus__title P a {
   font-size: 18px;
@@ -608,6 +650,57 @@ ul {
 .aboutus__title P a:hover {
   font-size: 18px;
   color: #417ad8;
+}
+.aboutus__forms {
+  margin: 15px 0;
+}
+.aboutus__forms h3 {
+  font-size: 22px;
+  color: #000;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.aboutus__forms .form .form-data {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 15px;
+  font-size: 20px;
+  background: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.aboutus__forms .form .form-data:focus {
+  border: 1px solid #a52a2a;
+  background: #000;
+  color: #f3e10f;
+}
+.aboutus__forms .form .form-textarea {
+  display: block;
+  margin-top: 15px;
+  width: 425px;
+  height: 90px;
+  font-size: 20px;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: transparent;
+  padding: 5px;
+}
+.aboutus__forms .form .form-but {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  margin-top: 15px;
+  background: #000;
+  color: #f3e10f;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+.aboutus__forms .form .form-but:hover {
+  cursor: pointer;
+  background: #a52a2a;
+  transition: 1s;
 }
 .footer {
   background-color: #5d6957;
@@ -642,6 +735,7 @@ ul {
 .footer__contacts .accounting p {
   color: #f3e10f;
   font-size: 18px;
+  margin-bottom: 5px;
 }
 .footer__maps {
   width: 100%;
@@ -669,4 +763,83 @@ ul {
   color: #fff;
   font-size: 18px;
   padding-left: 5px;
+}
+.alertm_overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 99998;
+  background: rgba(51, 51, 51, 0.82);
+  display: none;
+}
+.alertm_all {
+  font-family: Arial;
+  width: 396px;
+  padding: 29px 43px;
+  border-radius: 0.25rem;
+  background: #fff;
+  position: fixed;
+  left: 50%;
+  margin-left: -241px;
+  top: 50%;
+  z-index: 99999;
+}
+.alertm_all a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: #0275d8;
+}
+.alertm_all a:hover {
+  color: #222;
+}
+.alertm_h1 {
+  color: #0275d8;
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+.alertm_text {
+  font-size: 16px;
+  line-height: 23px;
+}
+.alertm_but {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+  display: block;
+  margin-top: 25px;
+  cursor: pointer;
+}
+.alertm_but:hover {
+  color: #fff;
+  background-color: #025aa5;
+  border-color: #01549b;
+}
+a.alertm_close {
+  color: red;
+  text-decoration: none;
+  position: absolute;
+  right: 7px;
+  top: 0px;
+  font-size: 25px;
 }
