@@ -134,6 +134,26 @@ ul {
   color: #fff917;
   border: 2px #fff917 solid;
 }
+.arrowup {
+  position: fixed;
+  bottom: 3%;
+  right: 2%;
+  background: linear-gradient(130deg, #f1d535 50%, rgba(97, 92, 92, 0.418) 50%);
+  background-size: 300%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+.arrowup img {
+  width: 70px;
+  height: 70px;
+}
+.arrowup:hover {
+  background-position: 100% 0;
+}
 .pagenav {
   display: flex;
   flex-wrap: wrap;
